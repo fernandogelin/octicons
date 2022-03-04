@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable import/no-commonjs */
 /* eslint-env node */
 const fs = require('fs-extra')
 const path = require('path')
@@ -53,6 +54,10 @@ const icons = svgFilepaths.map(filepath => {
     const [, name, height] = filename.match(filenamePattern)
     const svg = fs.readFileSync(path.resolve(filepath), 'utf8')
     const svgElement = cheerio.load(svg)('svg')
+    svgElement
+      .children()
+      .removeAttr('fill')
+      .attr('fill', 'currentColor')
     const svgWidth = parseInt(svgElement.attr('width'))
     const svgHeight = parseInt(svgElement.attr('height'))
     const svgViewBox = svgElement.attr('viewBox')
