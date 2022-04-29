@@ -39,6 +39,7 @@ if (svgFilepaths.length === 0) {
 }
 
 let exitCode = 0
+type Icon;
 
 const icons = svgFilepaths.map(filepath => {
   try {
