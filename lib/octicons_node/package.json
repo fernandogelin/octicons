@@ -1,21 +1,20 @@
 {
-  "name": "@fernandogelin/octicons",
-  "version": "0.1.2-development",
-  "description": "A scalable set of icons handcrafted with <3 by GitHub.",
-  "homepage": "https://primer.style/octicons",
-  "author": "GitHub Inc.",
+  "name": "@xplortech/apollo-icons",
+  "version": "0.1.6-development",
+  "description": "A scalable set of icons for Xplor's Apollo Design System.",
+  "homepage": "https://xplor-apollo.herokuapp.com/?path=/story/icons-icons--icons",
+  "author": "Xplor",
   "license": "MIT",
   "style": "index.scss",
   "main": "index.js",
   "files": [
     "index.js",
-    "index.d.ts",
     "index.scss",
     "build"
   ],
-  "repository": "https://github.com/primer/octicons.git",
+  "repository": "https://github.com/xplor/apollo-icons",
   "bugs": {
-    "url": "https://github.com/primer/octicons/issues"
+    "url": "https://github.com/xplor/apollo-icons/issues"
   },
   "scripts": {
     "build": "\\cp -r ../build/ ./build && \\cp index.scss ./build/build.css",
@@ -24,6 +23,7 @@
   },
   "keywords": [
     "GitHub",
+    "Xplor",
     "icons",
     "svg",
     "octicons"
