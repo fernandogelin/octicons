@@ -1,6 +1,6 @@
 {
   "name": "@xplortech/apollo-icons",
-  "version": "0.1.6-development",
+  "version": "0.0.1",
   "description": "A scalable set of icons for Xplor's Apollo Design System.",
   "homepage": "https://xplor-apollo.herokuapp.com/?path=/story/icons-icons--icons",
   "author": "Xplor",
@@ -19,7 +19,10 @@
   "scripts": {
     "build": "\\cp -r ../build/ ./build && \\cp index.scss ./build/build.css",
     "lint": "eslint index.js tests/*.js",
-    "test": "ava --verbose 'tests/*.js'"
+    "test": "ava --verbose 'tests/*.js'",
+    "release-major": "release-it major --disable-metrics -- --ci",
+    "release-minor": "release-it minor --disable-metrics -- --ci",
+    "release-patch": "release-it patch --disable-metrics -- --ci"
   },
   "keywords": [
     "GitHub",
@@ -33,9 +36,11 @@
   },
   "devDependencies": {
     "@github/prettier-config": "0.0.4",
+    "auto-changelog": "^2.4.0",
     "ava": "^0.22.0",
     "eslint": "^6.5.1",
-    "eslint-plugin-github": "4.1.3"
+    "eslint-plugin-github": "4.1.3",
+    "release-it": "^15.0.0"
   },
   "eslintConfig": {
     "extends": [

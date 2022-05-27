@@ -1,0 +1,7 @@
+{
+    "commitLimit": false,
+    "releaseSummary": true,
+    "stdout": true,
+    "template": "changelog-template.hbs",
+    "unreleasedOnly": true
+}

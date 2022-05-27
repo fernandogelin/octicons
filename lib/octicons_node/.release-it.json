@@ -1,0 +1,26 @@
+{
+  "git": {
+    "changelog": "auto-changelog",
+    "commit": true,
+    "tag": true,
+    "push": true,
+    "commitMessage": "[Release] Apollo Icons ${version}",
+    "requireBranch": "main"
+  },
+  "github": {
+    "release": true
+  },
+  "hooks": {
+    "before:init": [
+        "git checkout main",
+        "git pull origin main",
+        "git fetch --prune --prune-tags origin"
+    ],
+    "after:release": [
+        "git push origin main"
+    ]
+  },
+  "npm": {
+      "publish": true
+  }
+}
